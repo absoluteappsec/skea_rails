@@ -1,1 +1,16 @@
-<h1> Hello, you are home <3</h1>
+<h1 align="center"> Hello, you are home <3</h1>
+
+<h3 align="center"> <%= link_to "View all of our articles", articles_path %> or click on one (below) <h3>
+
+<div align="center">
+ List of articles:
+
+  <% Article.all.each do |article| %>
+    <% if article %>
+      <div>
+        <%= link_to article.name, article_path(id: article.id) %>
+      </div>
+     <%end %>
+  <% end %>
+
+</div>

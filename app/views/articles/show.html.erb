@@ -1,0 +1,18 @@
+<div align="center">
+  <div>
+    <h1>
+    <%= @article.name %>
+    </h1>
+  </div>
+  <div>
+    <h3>
+    <%= @article.body %>
+    </h3>
+  </div>
+  <div>
+    <h3>
+    <%= link_to "Likes", vote_path(id: @article.id, type: "like"), method: :post %>: <%= @article.likes.to_i %> <%= link_to "Dislikes", vote_path(id: @article.id, type: "dislike"), method: :post %>: <%= @article.dislikes.to_i %>
+    </h3>
+  </div>
+  <%= link_to "<<back", articles_path %>
+</div>
