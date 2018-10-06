@@ -1,6 +1,8 @@
+<div align="center">
+
 <% @articles.each do |article| %>
 
-<div align="center">
+
   <div>
     <h1>
     <%= article.name %>
@@ -16,6 +18,7 @@
       <%= link_to "Likes", vote_path(id: article.id, type: "like"), method: :post %>: <%= article.likes.to_i %> <%= link_to "Dislikes", vote_path(id: article.id, type: "dislike"), method: :post %>: <%= article.dislikes.to_i %>
     </h3>
   </div>
-  <%= link_to "<<back", articles_path %>
-</div>
+
 <% end %>
+<%= link_to "<<home>>", root_path %>
+</div>

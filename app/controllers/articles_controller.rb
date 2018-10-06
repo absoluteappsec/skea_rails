@@ -1,11 +1,13 @@
 class ArticlesController < ApplicationController
 
+  before_action :authenticate_user!
+
   def new
     @article = Article.new
   end
 
   def create
-    Article.create(article_params)
+    #Article.create(article_params)
   end
 
   def index
@@ -19,20 +21,11 @@ class ArticlesController < ApplicationController
   def vote
     article = Article.find(params[:id])
     if params[:type] == "like"
-      if article.likes.nil?
-        article.update_attribute(:likes, 1)
-      else
         article.likes += 1
         article.save
-      end
     elsif params[:type] == "dislike"
-       params[:type] == "like"
-       if article.dislikes.nil?
-         article.update_attribute(:dislikes, 1)
-       else
-         article.dislikes += 1
-         article.save
-       end
+        article.dislikes += 1
+        article.save
     end
     redirect_to article_path(id: article.id)
   end
@@ -44,6 +37,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    [:name, :body]
+    #[:name, :body]
   end
 end

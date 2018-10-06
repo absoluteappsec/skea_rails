@@ -18,14 +18,18 @@ articles = [
   {
     :info => {
       name: "computers are hard",
-      body: "no but srsly!"
+      body: "no but srsly!",
+      likes: 0,
+      dislikes: 0
     }
 
   },
   {
     :info => {
       name: "Woodworking quarterly",
-      body: "Ron Swanson wins again"
+      body: "Ron Swanson wins again",
+      likes: 0,
+      dislikes: 0
     }
 
   }
