@@ -1,25 +1,25 @@
-# README
+# SKEA Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to Seth & Ken's Excellent Adventure - Rails edition!!!
 
-Things you may want to cover:
+This is a sample app used to perform an authz functions exercise
 
 * Ruby version
 
+whatever is in `.ruby-version` :smile:
+
 * System dependencies
+
+Your system should have `rvm` or `rbenv`
 
 * Configuration
 
-* Database creation
+Run:
 
-* Database initialization
+```
+# To get the db setup
+rake db:setup
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# skea_rails
+# To start the thing
+rails s
+```
