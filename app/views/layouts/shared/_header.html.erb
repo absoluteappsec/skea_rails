@@ -1,0 +1,7 @@
+<% if current_user %>
+<div align="right">
+<%= link_to "My profile", edit_user_registration_path  %>
+<p/>
+<%= link_to "Logout",  destroy_user_session_path, method: :delete  %>
+</div>
+<% end %>
